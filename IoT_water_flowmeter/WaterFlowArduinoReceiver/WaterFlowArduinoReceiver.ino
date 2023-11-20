@@ -3,9 +3,9 @@
 // Receiver pin 4
 // Transmitter pin 5
 
-#define BLYNK_TEMPLATE_ID "TMPL3T6htcwul"
-#define BLYNK_TEMPLATE_NAME "Build Club"
-#define BLYNK_AUTH_TOKEN "jOpluD941J30Jsykhpq9r6-gHZ95ytMu"
+#define BLYNK_TEMPLATE_ID ""
+#define BLYNK_TEMPLATE_NAME ""
+#define BLYNK_AUTH_TOKEN ""
 
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
@@ -16,8 +16,8 @@ BlynkTimer timer;
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "BBB";
-char pass[] = "9841148883";
+char ssid[] = "";
+char pass[] = "";
 
 void myTimer(){ 
   Blynk.virtualWrite(V0, readValue);
