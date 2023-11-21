@@ -1,5 +1,3 @@
-![BuildClubSSN](./Images/BuildClubSSN.jpeg)
-
 # Arduino and esp32 based IoT Water meter 
 
 This project is a great build to get started on with your journey in the world of microcontrollers and Internet of Things. In this project you shall learn to use the water flow hall sensor and produce some useful information from the rawdata fed by the sensor to the arduino mega board. You will also learn to use the UART pins to communicate between the Arduino and esp32 boards, and send the live rawdata to a remote cloud database hosted on the internet by Blynk, an IoT platform which supports both android and ios. Have a great build!
