@@ -10,7 +10,7 @@
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 
-int readValue = 0;
+int pulseCount = 0;
 
 BlynkTimer timer;
 
@@ -20,7 +20,7 @@ char ssid[] = "";
 char pass[] = "";
 
 void myTimer(){ 
-  Blynk.virtualWrite(V0, readValue);
+  Blynk.virtualWrite(V0, pulseCount);
 }
 
 void setup() {
@@ -36,15 +36,26 @@ void loop() {
   // put your main code here, to run repeatedly.
 
   char buffer[20] = "";
-  if(Serial.available() > 0) {
+  if (Serial.available() > 0) {
     Serial.readBytesUntil('\n', buffer, 20);
-    readValue = atoi(buffer); // convert char to int type.
-    Serial.print("Flow rate value: ");
-    Serial.println(readValue);
+    pulseCount = atoi(buffer); // convert char to int type.
+    Serial.print("Flow count value: ");
+    Serial.println(pulseCount);
   }
 
   Blynk.run();
   timer.run();
 }
 
+float calculate_volume() {
+  // Code to calculate the volume goes here...
+  // Don't forget to return value.
+  return 0;
+}
+
+float calculate_flow_rate() {
+  // Code to calculate the flow rate goes here...
+  // Don't foget to return value.
+  return 0;
+}
 
